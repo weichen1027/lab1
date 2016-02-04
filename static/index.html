@@ -1,23 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
 <html>
-<body style="background-color:lightgrey;">
-<head>
-	<meta charset="utf-8">
-	<title>HCI Project Portfolio</title>
-</head>
+	<head>
+		<title>New York</title>
+		<meta name="viewport" content="width = 1050, user-scalable = no" />
+		<script type="text/javascript" src="view/extras/jquery.min.1.7.js"></script>
+		<script type="text/javascript" src="view/extras/modernizr.2.5.3.min.js"></script>
+	</head>
 
-<body>
-	<!-- this is a comment in HTML -->
-	<h1><font color="purple">Weichen Wang</font></h1> <!-- h1 through h5 are headers. The higher the number, the smaller the header -->
-	<h3>Project Portfolio</h3>
+	<body>
+			<!-- div class="header" >
+				<p> New York: a travel to the big apple </p>
+			</div>
 
-	<!-- p means paragraph -->
-	<p>I am a first year Master student studying Computer Science and Engineering at UC San Diego. I received B.S. in Computer Science and Information Engineering at National Taiwan University.</p>
+			<div class="empty"></div -->
+		<div>
+			<div class="flipbook-viewport">
+				<div class="container">
+					<div class="flipbook">
+						<div style="background-image:url(view/pages/ny.jpg)"></div>
+						<div style="background-image:url(view/pages/word1.png)"></div>
+						<div style="background-image:url(view/pages/empire.jpg)"></div>
+						<div style="background-image:url(view/pages/word2.png)"></div>
+						<div style="background-image:url(view/pages/times.jpeg)"></div>
+						<div style="background-image:url(view/pages/word3.png)"></div>
+						<div style="background-image:url(view/pages/google.jpg)"></div>
+						<div style="background-image:url(view/pages/end.png)"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-	<h4>Projects</h4>
-	<ol>
-		<a href="255.html">2015 Fall CSE 255 Final Project: San Francisco Crime Classification</a>
-	</ol>
-</body>
+		<script type="text/javascript">
+
+		function loadApp() {
+
+			// Create the flipbook
+
+			$('.flipbook').turn({
+					display: 'single',
+					
+					// Width
+
+					width:922/2,
+					
+					// Height
+
+					height:600,
+
+					// Elevation
+
+					elevation: 50,
+					
+					// Enable gradients
+
+					gradients: true,
+					
+					// Auto center this flipbook
+
+					autoCenter: true
+
+			});
+		}
+
+		// Load the HTML4 version if there's not CSS transform
+
+		yepnope({
+			test : Modernizr.csstransforms,
+			yep: ['view/lib/turn.js'],
+			nope: ['view/lib/turn.html4.min.js'],
+			both: ['view/css/basic.css'],
+			complete: loadApp
+		});
+
+		</script>
+	</body>
 </html>
