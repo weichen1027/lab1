@@ -3771,7 +3771,7 @@
 			}
 
 			#sidebar nav a:before {
-				background: #FDE3A7;
+				background: #A24208;
 			}
 
 			#sidebar nav a:after {
@@ -3867,7 +3867,7 @@
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color: #A24208;
+							background-color: #FDE3A7;
 						}
 
 		}
